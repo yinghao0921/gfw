@@ -130,6 +130,19 @@
       ]
     },
     {
+      "tag": "Github",
+      "type": "selector",
+      "outbounds": [
+        "Proxy",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
       "tag": "Telegram",
       "type": "selector",
       "outbounds": [
@@ -497,15 +510,6 @@
           "xtyxsw.org",
           "passwallwall.life"
         ],
-        "outbound": "China"
-      },
-      {
-        "domain_keyword": [
-          "copilot"
-        ],
-        "outbound": "OpenAI"
-      },
-      {
         "domain": [
           "clash.razord.top",
           "yacd.metacubex.one",
@@ -514,6 +518,12 @@
           "hfa09ap7bf2.vpn.mynetname.net"
         ],
         "outbound": "China"
+      },
+      {
+        "domain_keyword": [
+          "copilot"
+        ],
+        "outbound": "OpenAI"
       },
       {
         "ip_is_private": true,
@@ -534,11 +544,14 @@
         "outbound": "OpenAI"
       },
       {
+        "rule_set": "geosite-github",
+        "outbound": "Github"
+      },
+      {
         "rule_set": [
           "geosite-youtube",
           "geoip-google",
-          "geosite-google",
-          "geosite-github"
+          "geosite-google"
         ],
         "outbound": "Google"
       },
@@ -633,7 +646,7 @@
         "tag": "geosite-openai",
         "type": "remote",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/Toperlock/sing-box-geosite@main/rule/OpenAI.srs",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ai-chat-!cn.srs",
         "download_detour": "direct"
       },
       {
