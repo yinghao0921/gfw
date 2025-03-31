@@ -59,14 +59,15 @@
       }
     ],
     "final": "localDns",
-    "strategy": "ipv4_only"
+    "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
       "tag": "tun-in",
       "type": "tun",
       "address": [
-        "172.19.0.0/30"
+        "172.19.0.0/30",
+        "fdfe:dcba:9876::0/126"      
       ],
       "mtu": 9000,
       "auto_route": true,
