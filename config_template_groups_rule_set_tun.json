@@ -532,6 +532,7 @@
       },
       {
         "rule_set": [
+          “geosite-wechat”，
           "geosite-apple@cn",
           "geosite-google@cn",
           "geosite-microsoft@cn",
@@ -865,6 +866,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google@cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-wechat",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.geekery.cn/raw.githubusercontent.com/yinghao0921/gfw/refs/heads/main/wechat.srs",
         "download_detour": "direct"
       }
     ]
