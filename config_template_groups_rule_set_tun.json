@@ -26,7 +26,7 @@
       },
       {
         "tag": "localDns",
-        "address": "192.168.88.1",
+        "address": "223.5.5.5",
         "detour": "direct"
       }
     ],
