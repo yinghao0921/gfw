@@ -871,8 +871,8 @@
       {
         "tag": "geosite-wechat",
         "type": "remote",
-        "format": "binary",
-        "url": "https://github.geekery.cn/raw.githubusercontent.com/yinghao0921/gfw/refs/heads/main/wechat.srs",
+        "format": "source",
+        "url": "https://github.geekery.cn/raw.githubusercontent.com/yinghao0921/gfw/refs/heads/main/wechat.json",
         "download_detour": "direct"
       }
     ]
