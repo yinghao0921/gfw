@@ -69,7 +69,8 @@
             "tag": "tun-in",
             "type": "tun",
             "address": [
-                "172.19.0.0/30"
+                "172.19.0.0/30",
+                "fdfe:dcba:9876::0/126"
             ],
             "mtu": 9000,
             "auto_route": true,
@@ -143,7 +144,7 @@
             "tag": "HongKong",
             "type": "urltest",
             "url": "https://www.gstatic.com/generate_204",
-            "interval": "15m",
+            "interval": "5m",
             "tolerance": 50,
             "outbounds": [
                 "{all}"
@@ -161,7 +162,7 @@
             "tag": "TaiWan",
             "type": "urltest",
             "url": "https://www.gstatic.com/generate_204",
-            "interval": "15m",
+            "interval": "5m",
             "tolerance": 50,
             "outbounds": [
                 "{all}"
@@ -179,7 +180,7 @@
             "tag": "Singapore",
             "type": "urltest",
             "url": "https://www.gstatic.com/generate_204",
-            "interval": "15m",
+            "interval": "5m",
             "tolerance": 50,
             "outbounds": [
                 "{all}"
@@ -197,7 +198,7 @@
             "tag": "Japan",
             "type": "urltest",
             "url": "https://www.gstatic.com/generate_204",
-            "interval": "15m",
+            "interval": "5m",
             "tolerance": 50,
             "outbounds": [
                 "{all}"
@@ -215,7 +216,7 @@
             "tag": "America",
             "type": "urltest",
             "url": "https://www.gstatic.com/generate_204",
-            "interval": "15m",
+            "interval": "5m",
             "tolerance": 50,
             "outbounds": [
                 "{all}"
@@ -233,7 +234,7 @@
             "tag": "Others",
             "type": "urltest",
             "url": "https://www.gstatic.com/generate_204",
-            "interval": "15m",
+            "interval": "5m",
             "tolerance": 50,
             "outbounds": [
                 "{all}"
@@ -262,7 +263,7 @@
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
-            "interval": "15m",
+            "interval": "5m",
             "tolerance": 50
         },
         {
