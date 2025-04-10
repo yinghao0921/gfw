@@ -103,7 +103,8 @@
                 "Japan",
                 "America",
                 "Others",
-                "direct"
+                "direct"，
+                "{all}"
             ]
         },
         {
