@@ -59,7 +59,7 @@
             }
         ],
         "final": "localDns",
-        "strategy": "prefer_ipv4",
+        "strategy": "prefer_ipv6",
         "disable_cache": false,
         "disable_expire": false,
         "cache_capacity": 32768
