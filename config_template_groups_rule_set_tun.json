@@ -21,12 +21,13 @@
     "servers": [
       {
         "tag": "proxyDns",
-        "address": "https://1.1.1.1/dns-query",
+        "address": "h3://dns.cloudflare.com/dns-query",
+        "address_resolver": "localDns",
         "detour": "Proxy"
       },
       {
         "tag": "localDns",
-        "address": "211.138.156.66",
+        "address": "h3://223.5.5.5/dns-query",
         "detour": "direct"
       }
     ],
@@ -59,7 +60,7 @@
       }
     ],
     "final": "localDns",
-    "strategy": "prefer_ipv4",
+    "strategy": "ipv4-only",
     "disable_cache": false,
     "disable_expire": false,
     "cache_capacity": 32768
@@ -334,7 +335,7 @@
       "tag": "HongKong",
       "type": "urltest",
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "15m",
+      "interval": "5m",
       "tolerance": 50,
       "outbounds": [
         "{all}"
@@ -352,7 +353,7 @@
       "tag": "TaiWan",
       "type": "urltest",
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "15m",
+      "interval": "5m",
       "tolerance": 50,
       "outbounds": [
         "{all}"
@@ -370,7 +371,7 @@
       "tag": "Singapore",
       "type": "urltest",
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "15m",
+      "interval": "5m",
       "tolerance": 50,
       "outbounds": [
         "{all}"
@@ -388,7 +389,7 @@
       "tag": "Japan",
       "type": "urltest",
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "15m",
+      "interval": "5m",
       "tolerance": 50,
       "outbounds": [
         "{all}"
@@ -406,7 +407,7 @@
       "tag": "America",
       "type": "urltest",
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "15m",
+      "interval": "5m",
       "tolerance": 50,
       "outbounds": [
         "{all}"
@@ -424,7 +425,7 @@
       "tag": "Others",
       "type": "urltest",
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "15m",
+      "interval": "5m",
       "tolerance": 50,
       "outbounds": [
         "{all}"
@@ -453,7 +454,7 @@
         }
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "15m",
+      "interval": "5m",
       "tolerance": 50
     },
     {
@@ -508,19 +509,12 @@
         "outbound": "direct"
       },
       {
-        "domain_suffix": [
-          "3yt.org",
-          "xtyxsw.org",
-          "passwallwall.life"
-        ],
-        "domain": [
-          "clash.razord.top",
-          "yacd.metacubex.one",
-          "yacd.haishan.me",
-          "d.metacubex.one",
-          "hfa09ap7bf2.vpn.mynetname.net"
-        ],
-        "outbound": "China"
+        "rule_set": "geosite-github",
+        "outbound": "Github"
+      },
+      {
+        "rule_set": "geosite-openai",
+        "outbound": "OpenAI"
       },
       {
         "domain_keyword": [
@@ -534,22 +528,18 @@
       },
       {
         "rule_set": [
+          "geosite-Direct",
           "geosite-wechat",
           "geosite-apple@cn",
+          "geosite-apple",
+          "geoip-apple",
           "geosite-google@cn",
           "geosite-microsoft@cn",
+          "geosite-microsoft",
           "geoip-cn",
           "geosite-cn"
         ],
         "outbound": "China"
-      },
-      {
-        "rule_set": "geosite-openai",
-        "outbound": "OpenAI"
-      },
-      {
-        "rule_set": "geosite-github",
-        "outbound": "Github"
       },
       {
         "rule_set": [
@@ -876,6 +866,14 @@
         "format": "source",
         "url": "https://github.geekery.cn/raw.githubusercontent.com/yinghao0921/gfw/refs/heads/main/wechat.json",
         "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-Direct",
+        "type": "remote",
+        "format": "source",
+        "url": "https://github.geekery.cn/raw.githubusercontent.com/yinghao0921/gfw/refs/heads/main/Direct.json",
+        "download_detour": "direct",
+        "update_interval": "5m"
       }
     ]
   }
