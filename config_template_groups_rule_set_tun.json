@@ -60,7 +60,7 @@
       }
     ],
     "final": "localDns",
-    "strategy": "ipv4-only",
+    "strategy": "ipv4_only",
     "disable_cache": false,
     "disable_expire": false,
     "cache_capacity": 32768
