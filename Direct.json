@@ -21,6 +21,11 @@
         "2mcnxs.com",
         "2mcnxs.cc"
       ]
+    },
+    {
+      "domain_regex": [      
+        "2mcn"
+      ]
     }
   ]
 }
