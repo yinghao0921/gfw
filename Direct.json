@@ -23,7 +23,8 @@
     },
     {
       "domain_regex": [      
-        "2mcn"
+        "2mcn",
+        "3zm"
       ]
     }
   ]
