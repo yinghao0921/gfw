@@ -145,7 +145,6 @@ DOMAIN-SUFFIX,fastlydns.net
 
 
 # 国外DNS
-DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,dns.google
 DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
 DOMAIN-SUFFIX,dot.sb
