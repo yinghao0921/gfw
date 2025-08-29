@@ -2,6 +2,9 @@
   "version": 2,
   "rules": [
     {
+    "process_name": ["wireguard.exe", "wg.exe"]
+    },
+    {
       "domain": [
         "clash.razord.top",
         "yacd.metacubex.one",
