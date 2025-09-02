@@ -1,9 +1,6 @@
 {
   "version": 2,
-  "rules": [
-    {
-    "process_name": ["wireguard.exe", "wg.exe"]
-    },
+  "rules": [    
     {
       "domain": [
         "clash.razord.top",
