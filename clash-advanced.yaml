@@ -1,10 +1,10 @@
 
 # 锚点区
-Proxy_first: &Proxy_first {type: select, proxies: [节点选择, 香港节点, 新加坡节点, 日本节点, 台湾节点, 韩国节点, 美国节点, 欧洲节点, 全部节点, 自建/家宽节点, 全球直连]}
+Proxy_first: &Proxy_first {type: select, proxies: [节点选择,自动选择,香港节点,新加坡节点,日本节点,台湾节点,韩国节点,美国节点,欧洲节点, 自建/家宽节点,全球直连]}
 
-Direct_first: &Direct_first {type: select, proxies: [全球直连, 节点选择,  香港节点, 新加坡节点, 日本节点, 台湾节点, 韩国节点, 美国节点, 欧洲节点, 全部节点, 自建/家宽节点]}
+Direct_first: &Direct_first {type: select, proxies: [全球直连, 节点选择, 自动选择, 香港节点, 新加坡节点, 日本节点, 台湾节点, 韩国节点, 美国节点, 欧洲节点,  自建/家宽节点]}
 
-Include_all: &Include_all {type: select, proxies: [节点选择, 香港节点, 新加坡节点, 日本节点, 台湾节点, 韩国节点, 美国节点, 欧洲节点, 全部节点, 自建/家宽节点, 全球直连], include-all: true, exclude-filter: "(?i)(🟢 直连)"}
+Include_all: &Include_all {type: select, proxies: [节点选择,自动选择, 香港节点, 新加坡节点, 日本节点, 台湾节点, 韩国节点, 美国节点, 欧洲节点,自建/家宽节点, 全球直连], include-all: true, exclude-filter: "(?i)(🟢 直连)"}
 
 PProviders: &PProviders {type: http, interval: 86400, health-check: {enable: true, url: 'https://edge.microsoft.com/captiveportal/generate_204', interval: 300}, filter: '^(?!.*(拒绝|直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|traffic))'}
 
@@ -16,15 +16,15 @@ proxy-providers:
   Airport_01:
     <<: *PProviders
     proxy: "🟢 直连"
-    url: "https://9770f00d98e.bigbigwatermelon.com/s?token=a0b13c5f3abb39d83790eee4028b0387"
+    url: "http://192.168.88.3:3001/DRYng8sVcu9BemR9UYvA/download/collection/op"
     override:
-      additional-prefix: '[西瓜]'
+      additional-prefix: '[组合]'
       skip-cert-verify: true
       udp: true
   Airport_02:
     <<: *PProviders
     proxy: "🟢 直连"
-    url: "https://vps.798989.xyz/9bd6c708-a3b5-43d8-bd96-3a6ed0415fe7/sub"
+    url: "https://vps.798989.xyz/tuzi/sub"
     override:
       additional-prefix: '[cloudflare]'
       skip-cert-verify: true
@@ -63,7 +63,7 @@ geox-url:
 
 # 控制面板
 external-controller: 0.0.0.0:9090
-secret: ""
+secret: "12366"
 #  密码设置选项默认无
 external-ui: ui
 external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
@@ -138,11 +138,11 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   proxy-server-nameserver:
-    - quic://dns.alidns.com/dns-query
-    - https://sm2.doh.pub/dns-query 
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   nameserver:
-    - quic://dns.alidns.com/dns-query
-    - https://sm2.doh.pub/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
 
 proxies: 
   - name: "🟢 直连"
@@ -152,7 +152,7 @@ proxies:
 
 # 策略组
 proxy-groups:
-  - {name: 节点选择, type: select, proxies: [香港节点, 新加坡节点, 日本节点, 台湾节点, 韩国节点, 美国节点, 欧洲节点, 全部节点, 自建/家宽节点, 故障转移], icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/select.png"}
+  - {name: 节点选择, type: select, proxies: [自动选择,香港节点, 新加坡节点, 日本节点, 台湾节点, 韩国节点, 美国节点, 欧洲节点, 自建/家宽节点, 故障转移], icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/select.png"}
 # 功能型代理组默认隐藏 start
   - {name: 🔗 代理, type: select, hidden: true, proxies: [节点选择]}
   - {name: 🚫 拒绝, type: select, hidden: true, proxies: [REJECT]}
@@ -181,7 +181,7 @@ proxy-groups:
   - {name: Apple, type: select, <<: *Direct_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/apple.png"}
   - {name: Emby,type: select, <<: *Proxy_first, icon: https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/emby.png}
   - {name: 哔哩哔哩, type: select, <<: *Direct_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/bilibili.png"}
-  - {name: 哔哩东南亚, type: select, proxies: [节点选择, 新加坡节点, 全部节点, 自建/家宽节点, 全球直连], icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/bilibilit.png"}
+  - {name: 哔哩东南亚, type: select, proxies: [节点选择, 新加坡节点, 自动选择, 自建/家宽节点, 全球直连], icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/bilibilit.png"}
   - {name: 巴哈姆特, type: select, proxies: [台湾节点], icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/bahamut.png"}
   - {name: Spotify, <<: *Proxy_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/spotify.png"}
   - {name: 国内媒体, type: select, <<: *Direct_first, icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/Chinese_media.png"}
@@ -216,9 +216,9 @@ proxy-groups:
   - {name: 台湾均衡, type: load-balance, include-all: true, strategy: consistent-hashing, hidden: true, filter: "(?i)(台|🇹🇼|TW|Taiwan)" ,exclude-filter: "(?i)(The_TW_balance|wcloud|0倍|0\\.1倍|0\\.01倍|0\\.3X|0\\.2x|0\\.5x|3X|2x|1\\.5x|traffic|plus)", icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/load-balance.png"}
   - {name: 韩国均衡, type: load-balance, include-all: true, strategy: consistent-hashing, hidden: true, filter: "(?i)(韩|🇰🇷|KR|Korea|South Korea)", exclude-filter: "(?i)(The_KR_balance|wcloud|0倍|0\\.1倍|0\\.01倍|0\\.3X|0\\.2x|0\\.5x|3X|2x|1\\.5x|traffic|plus)", icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/load-balance.png"}
   - {name: 美国均衡, type: load-balance, include-all: true, strategy: consistent-hashing, hidden: true, filter: "(?i)(美|🇺🇲|US|America|united States)" ,exclude-filter: "(?i)(The_US_balance|wcloud|0倍|0\\.1倍|0\\.01倍|0\\.3X|0\\.2x|0\\.5x|3X|2x|1\\.5x|russia|austria|plus|traffic|Australia|rus|aus)", icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/load-balance.png"}
-  - {name: 故障转移, type: fallback, include-all: true, proxies: [香港节点, 新加坡节点, 日本节点, 台湾节点, 韩国节点, 美国节点, 欧洲节点, 自建/家宽节点], interval: 300, exclude-filter: "(?i)(🟢 直连)", icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/fallback.png"}
-  - {name: 全部节点, type: url-test, include-all: true, tolerance: 20, interval: 300, exclude-filter: "(?i)(🟢 直连)", icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/all.png"}
-  - {name: GLOBAL, type: select, include-all: true , proxies: [节点选择, YouTube, Crypto, FCM, Google, Meta, AI, GitHub, OneDrive, Microsoft, Telegram, Discord, Talkatone, LINE, Signal, TikTok, NETFLIX, DisneyPlus, HBO, Primevideo, AppleTV, Apple, Emby, 哔哩哔哩, 哔哩东南亚, 巴哈姆特, Spotify, 国内媒体, Global-TV, Global-Medial, 游戏平台, Speedtest, PayPal, Wise, 国外电商, STEAM, 全球直连, 隐私拦截, Final, 自建/家宽节点, 香港节点, 新加坡节点, 日本节点, 台湾节点, 韩国节点, 美国节点, 欧洲节点, 香港自动, 新加坡自动, 日本自动, 台湾自动, 韩国自动, 美国自动, 香港均衡, 新加坡均衡, 日本均衡, 台湾均衡, 韩国均衡, 美国均衡, 故障转移, 全部节点], exclude-filter: "(?i)(🟢 直连)", icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/global.png"}
+  - {name: 故障转移, type: fallback, include-all: false, proxies: [香港节点, 新加坡节点, 日本节点, 台湾节点, 韩国节点, 美国节点, 欧洲节点, 自建/家宽节点], interval: 300, exclude-filter: "(?i)(🟢 直连)", icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/fallback.png"}
+  - {name: 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, exclude-filter: "(?i)(🟢 直连)", icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/all.png"}
+  - {name: GLOBAL, type: select, include-all: true , proxies: [节点选择, YouTube, Crypto, FCM, Google, Meta, AI, GitHub, OneDrive, Microsoft, Telegram, Discord, Talkatone, LINE, Signal, TikTok, NETFLIX, DisneyPlus, HBO, Primevideo, AppleTV, Apple, Emby, 哔哩哔哩, 哔哩东南亚, 巴哈姆特, Spotify, 国内媒体, Global-TV, Global-Medial, 游戏平台, Speedtest, PayPal, Wise, 国外电商, STEAM, 全球直连, 隐私拦截, Final, 自建/家宽节点, 香港节点, 新加坡节点, 日本节点, 台湾节点, 韩国节点, 美国节点, 欧洲节点, 香港自动, 新加坡自动, 日本自动, 台湾自动, 韩国自动, 美国自动, 香港均衡, 新加坡均衡, 日本均衡, 台湾均衡, 韩国均衡, 美国均衡, 故障转移, 自动选择], exclude-filter: "(?i)(🟢 直连)", icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/refs/heads/main/icon/global.png"}
 rules: 
   - RULE-SET,banAd_domain,隐私拦截
   - RULE-SET,wechat_domain,全球直连
