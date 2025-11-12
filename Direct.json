@@ -33,6 +33,7 @@
     {
       "domain_regex": [      
         "2mcn",
+        "tailscale",
         "3zm",
         "114xs",
         "zanghaihualxt",
