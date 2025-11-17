@@ -24,7 +24,7 @@ proxy-providers:
   Airport_02:
     <<: *PProviders
     proxy: "🟢 直连"
-    url: "https://vps.798989.xyz/tuzi/sub"
+    url: ""
     override:
       additional-prefix: '[cloudflare]'
       skip-cert-verify: true
