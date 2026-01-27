@@ -14,6 +14,8 @@
     },
     {
       "domain_suffix": [
+        ".v2.argotunnel.com",
+        ".cftunnel.com",
         ".tailscale.com",
         ".shouda8.org",
         ".3yt.org",
