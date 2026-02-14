@@ -6,9 +6,7 @@
         "clash.razord.top",
         "yacd.metacubex.one",
         "yacd.haishan.me",
-        "d.metacubex.one",
-        "hfa09ap7bf2.vpn.mynetname.net",
-        "hfa09ap7bf2.sn.mynetname.net",
+        "d.metacubex.one",        
         "scikit-learn.org"
       ]
     },
@@ -46,7 +44,7 @@
       ]
     },
     {
-        "ip_cidr": "192.73.220.101/32",
+        "ip_cidr": "192.73.220.100/32",
         "port": [10472]
     }
   ]
