@@ -103,6 +103,9 @@ IP-CIDR,223.6.6.6/32,no-resolve
 IP-CIDR,180.76.76.76/32,no-resolve
 IP-CIDR,114.114.114.114/32,no-resolve
 IP-CIDR,114.114.115.115/32,no-resolve
+IP-CIDR,114.55.128.0/17,no-resolve
+IP-CIDR,114.55.192.0/18,no-resolve
+IP-CIDR,114.55.224.0/19,no-resolve
 
 
 # 360
