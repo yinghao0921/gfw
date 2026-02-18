@@ -2,6 +2,10 @@
 
 # MyList
 # 域名后缀
+DOMAIN-SUFFIX,ecovacs.com
+DOMAIN-SUFFIX,ecovacsworld.com
+DOMAIN-SUFFIX,dessmann.cn
+DOMAIN-SUFFIX,dessmann.com
 DOMAIN-SUFFIX,usertrust.com
 DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,getui.com
@@ -668,3 +672,5 @@ DOMAIN-SUFFIX,zhimg.com
 DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,zhongsou.com
 DOMAIN-SUFFIX,zhuihd.com
+DOMAIN-KEYWORD,ecovac
+DOMAIN-KEYWORD,dessmann
