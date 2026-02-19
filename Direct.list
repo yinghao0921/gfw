@@ -2,6 +2,14 @@
 
 # MyList
 # 域名后缀
+DOMAIN-SUFFIX,dessmann.com.cn,
+DOMAIN-SUFFIX,dessmannlock.com
+DOMAIN-SUFFIX,xiaodi.com.cn
+DOMAIN-KEYWORD,dessmann
+DOMAIN-KEYWORD,xiaodi
+DOMAIN-KEYWORD,ecovacs
+DOMAIN-KEYWORD,ecouser
+DOMAIN-SUFFIX,deeebot.com
 DOMAIN-SUFFIX,ecovacs.com
 DOMAIN-SUFFIX,ecovacsworld.com
 DOMAIN-SUFFIX,dessmann.cn
