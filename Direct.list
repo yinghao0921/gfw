@@ -3,12 +3,15 @@
 # MyList
 # 域名后缀
 
-DOMAIN-KEYWORD,dessmann
-DOMAIN-SUFFIX,dessmann.com.cn,
-DOMAIN-SUFFIX,dessmannlock.com
-DOMAIN-SUFFIX,dessmann.cn
+# 德施曼智能锁
+DOMAIN-SUFFIX,dessmann.com.cn
 DOMAIN-SUFFIX,dessmann.com
-DOMAIN-SUFFIX,dsmlogin.com
+DOMAIN-SUFFIX,dsmxp.com
+DOMAIN-SUFFIX,aliyuncs.com
+DOMAIN-SUFFIX,iot.aliyun.com
+DOMAIN-SUFFIX,link.aliyun.com
+DOMAIN-SUFFIX,iot-as.aliyuncs.com
+DOMAIN-KEYWORD,dessmann
 
 DOMAIN-SUFFIX,xiaodi.com.cn
 DOMAIN-KEYWORD,xiaodi
