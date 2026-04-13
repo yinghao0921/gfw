@@ -7,7 +7,7 @@
 DOMAIN-SUFFIX,dessmann.com.cn
 DOMAIN-SUFFIX,dessmann.com
 DOMAIN-SUFFIX,dsmxp.com
-DOMAIN-SUFFIX,aliyuncs.com
+# DOMAIN-SUFFIX,aliyuncs.com
 DOMAIN-SUFFIX,iot.aliyun.com
 DOMAIN-SUFFIX,link.aliyun.com
 DOMAIN-SUFFIX,iot-as.aliyuncs.com
